@@ -1,0 +1,6 @@
+/* pages/home/home.wxss */
+#btn{
+    background: #fc0;
+    color: #fff;
+    width: 750rpx;
+}
