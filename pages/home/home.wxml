@@ -1,3 +1,40 @@
 <view class="container">
-    我是首页
+<!-- 消失显示 -->
+    <button bindtap="change">{{isShow?"消失":"显示"}}</button>
+    <view class="show" wx:if="{{isShow}}">
+    元素 
+    </view>
+    <!-- 分割线 -->
+     <view class="line"></view>
+     <!-- 选项卡 -->
+     <view class="top">
+        <view class="{{'btn'+(num==0?'active':'')}}" data-index="{{0}}" bindtap="tab">1</view>
+        <view class="{{ 'btn ' + (num==1?'active':'') }}" data-index="{{1}}" bindtap="tab">2</view>
+    <view class="{{ 'btn ' + (num==2?'active':'') }}" data-index="{{2}}" bindtap="tab">3</view>
+     </view>
+     <view class="main">
+    <view class="show" wx:if="{{ num == 0 }}">111</view>
+    <view class="show" wx:if="{{ num == 1 }}">222</view>
+    <view class="show" wx:if="{{ num == 2 }}">333</view>
+  </view>
+  <!-- 分割线 -->
+  <view class="line"></view>
+
+      <view class="top">
+    <view wx:for="{{arr}}" 
+      class="{{ 'btn ' + (num==index?'active':'') }}" 
+      wx:key="{{index}}"
+      data-index="{{index}}" 
+      bindtap="tab">{{item.title}}</view> 
+  </view>
+  <view class="main">
+    <view 
+      class="show" 
+      wx:for="{{arr}}"
+      wx:key="{{index}}"
+      wx:if="{{ num == index }}"
+    
+    >{{item.content}}</view>
+    
+  </view>
 </view>

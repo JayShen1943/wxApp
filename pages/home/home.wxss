@@ -4,3 +4,13 @@
     color: #fff;
     width: 750rpx;
 }
+.show{
+    width: 300rpx;
+    height: 300rpx;
+    background: #fc0;
+}
+.line{
+    height: 2rpx;
+    width: 750rpx;
+    background: #000;
+}
