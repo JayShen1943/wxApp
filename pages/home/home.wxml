@@ -1,5 +1,53 @@
-<import src="/template/Head/Head.wxml"/>
-<view> 
-    <!-- <template is="head" data="{{title:'小明真棒',obj}}"/> -->
-   <template is="head" data="{{title:'小明真棒',...obj}}"/>
+<view class="container"> 
+<!-- 横向滚动 -->
+    <scroll-view 
+        class="scroll"
+        scroll-x="{{true}}"
+        upper-threshold="{{50}}"
+        bindscrolltoupper="scroll"
+        scroll-into-view="c"
+        scroll-with-animation="{{true}}"
+        enable-back-to-top="{{true}}"
+    >
+     <view class="wrap">
+        <view class="content">1</view>
+        <view class="content">2</view>
+        <view class="content" id="c">3</view>
+        <view class="content">4</view>
+        <view class="content">5</view>
+        <view class="content">6</view>
+        <view class="content">7</view>
+    </view>
+    </scroll-view>
+
+    <!-- 轮播 -->
+     <view class="line"></view>
+  <swiper class="swiper"
+  indicator-dots="{{true}}"
+  indicator-color="#fff"
+  indicator-active-color="#df5698"
+  autoplay="{{true}}"
+  current="{{1}}"
+  interval="{{2000}}"
+  circular="{{true}}"
+  bindchange="scroll2"
+  >
+    <swiper-item class="swiper-item" item-id="1">
+        1
+    </swiper-item>
+    <swiper-item class="swiper-item" item-id="2">
+        2
+    </swiper-item>
+    <swiper-item class="swiper-item" item-id="3">
+        3
+    </swiper-item>
+    <swiper-item class="swiper-item" item-id="4">
+        4
+    </swiper-item>
+  </swiper>
+
+   <view class="line"></view>
+  <view class="box2" hover-class="act">
+    <view class="box" hover-stop-propagation="{{true}}" hover-class="act"></view>
+    </view>
 </view>

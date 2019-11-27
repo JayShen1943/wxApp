@@ -1,4 +1,3 @@
-/**app.wxss**/
 .container {
   height: 100%;
   display: flex;
@@ -8,3 +7,9 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.line{
+  width:750rpx;
+  height:1px;
+  margin-top:10px;
+  background: #000;
+}

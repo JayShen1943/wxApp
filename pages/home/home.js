@@ -7,11 +7,15 @@ Page({
 
   //页面的初始数据
   data: {
-    obj:{
-      name:"杨浩田",
-      content:"真漂亮"
-    }
+
   },
+  scroll(){
+    console.log("滚动1")
+  },
+  scroll2(e){
+    console.log(e.detail);
+  },
+ 
   //生命周期函数--监听页面加载
   onLoad: function (options) {
     //接受 页面间的传参、发送ajax
