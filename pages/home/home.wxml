@@ -1,53 +1,32 @@
 <view class="container"> 
-<!-- 横向滚动 -->
-    <scroll-view 
-        class="scroll"
-        scroll-x="{{true}}"
-        upper-threshold="{{50}}"
-        bindscrolltoupper="scroll"
-        scroll-into-view="c"
-        scroll-with-animation="{{true}}"
-        enable-back-to-top="{{true}}"
-    >
-     <view class="wrap">
-        <view class="content">1</view>
-        <view class="content">2</view>
-        <view class="content" id="c">3</view>
-        <view class="content">4</view>
-        <view class="content">5</view>
-        <view class="content">6</view>
-        <view class="content">7</view>
-    </view>
-    </scroll-view>
+<!-- 图标 -->
+    <icon class="" type="success" size="50" color="#f87612"></icon>
+     <icon  type="clear" size="50" color="#456789"></icon>
+      <icon  type="cancel" size="50" color="#456789"></icon>
+       <view class="line"></view>
+<!-- 进度条 -->
+     <progress class="pro"
+    percent="{{100}}"
+    stroke-width="{{10}}"
+    show-info="{{true}}"
+    color="#dc7"
+    activeColor="#12ed69"
+    active="{{true}}"
+    duration="{{50}}"
+ >
+     进度条
+ </progress>
+ <view class="line"></view>
+ <!--  -->
+ <rich-text class="" type = "node*" nodes="{{'<div><p style=`color:red`>aaaadwdw</p></div>'}}">
+ </rich-text>
+ <view class="line"></view>
+ <button loading="{{loading}}" bindtap="http">提交</button>
+ <!-- <button open-type="getPhoneNumber" bindgetphonenumber="">获取手机号</button> -->
+ <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</button>
 
-    <!-- 轮播 -->
-     <view class="line"></view>
-  <swiper class="swiper"
-  indicator-dots="{{true}}"
-  indicator-color="#fff"
-  indicator-active-color="#df5698"
-  autoplay="{{true}}"
-  current="{{1}}"
-  interval="{{2000}}"
-  circular="{{true}}"
-  bindchange="scroll2"
-  >
-    <swiper-item class="swiper-item" item-id="1">
-        1
-    </swiper-item>
-    <swiper-item class="swiper-item" item-id="2">
-        2
-    </swiper-item>
-    <swiper-item class="swiper-item" item-id="3">
-        3
-    </swiper-item>
-    <swiper-item class="swiper-item" item-id="4">
-        4
-    </swiper-item>
-  </swiper>
-
-   <view class="line"></view>
-  <view class="box2" hover-class="act">
-    <view class="box" hover-stop-propagation="{{true}}" hover-class="act"></view>
-    </view>
+  <view class="line"></view>
+ <navigator  url="/pages/news/news" hover-class="navigator-hover" open-type="navigate">
+     到new页面
+ </navigator>
 </view>

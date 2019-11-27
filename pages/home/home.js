@@ -7,13 +7,21 @@ Page({
 
   //页面的初始数据
   data: {
-
+    loading:false
   },
-  scroll(){
-    console.log("滚动1")
+  http(){
+    // 变成true
+    this.setData({
+      loading:true
+    })
+    setTimeout(() => {
+      this.setData({
+        loading:false
+      })
+    }, 2000);
   },
-  scroll2(e){
-    console.log(e.detail);
+  getUserInfo(e){
+    console.log(e.detail.userInfo.avatarUrl);
   },
  
   //生命周期函数--监听页面加载
