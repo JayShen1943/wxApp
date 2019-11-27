@@ -7,36 +7,11 @@ Page({
 
   //页面的初始数据
   data: {
-    isShow:true,
-    num:0,
-    arr:[
-      {
-        title:"喷火龙",
-        content:"火系"
-      },
-      {
-        title:"耿鬼",
-        content:"幽灵系"
-      },
-      {
-        title:"皮卡丘",
-        content:"电系"
-      }
-    ]
+    obj:{
+      name:"杨浩田",
+      content:"真漂亮"
+    }
   },
-  change(){
-    this.setData({
-      isShow:!this.data.isShow
-    })
-  },
-  tab(e){
-    let {index}=e.currentTarget.dataset;
-    console.log(index);
-    this.setData({
-      num:index
-    })
-  },
-
   //生命周期函数--监听页面加载
   onLoad: function (options) {
     //接受 页面间的传参、发送ajax

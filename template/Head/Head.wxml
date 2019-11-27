@@ -1,0 +1,8 @@
+<template name="head">
+    <view class="head">
+    公共头部
+    {{title}}
+    {{name}}
+    {{content}}
+    </view>
+</template>
