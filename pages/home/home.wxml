@@ -1,5 +1,3 @@
-<!--pages/home/home.wxml-->
-<text>我们的开始，是很长的电影</text>
 <view class="container">
-    <button id="btn">按钮</button>
+    我是首页
 </view>

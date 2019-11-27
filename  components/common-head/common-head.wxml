@@ -1,0 +1,9 @@
+<view>
+    <text class="title">
+        {{title}}
+        {{subTitle}}
+    </text>
+    <button bindtap="emitData">父向子传数据</button>
+    <slot class="a"></slot>
+    <slot class="b"></slot>
+</view>                                                                                          
