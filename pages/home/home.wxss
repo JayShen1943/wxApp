@@ -1,3 +1,7 @@
 .pro{
   width:750rpx;
 }
+.map{
+  width:750rpx;
+  height:500rpx;
+}

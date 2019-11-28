@@ -7,30 +7,66 @@ Page({
 
   //页面的初始数据
   data: {
-    loading:false
+    // 经度、纬度
+    longitude:0,
+    latitude:0
   },
-  http(){
-    // 变成true
-    this.setData({
-      loading:true
+  // 获取当前的地理位置
+  location(){
+    // 定位
+    wx.getLocation({
+      // 开启高精度定位
+      isHighAccuracy:true,
+      success:(res)=>{
+        console.log(res)
+        this.setData(
+          {
+            longitude:res.longitude,
+            latitude:res.latitude
+          }
+        )
+      }
     })
-    setTimeout(() => {
-      this.setData({
-        loading:false
-      })
-    }, 2000);
   },
-  getUserInfo(e){
-    console.log(e.detail.userInfo.avatarUrl);
+  enterNews(){
+    wx.navigateTo({
+      url: '/pages/news/news',
+      success:(res)=>{
+        console.log(res);
+        res.eventChannel.emit("aaa",123)
+      }
+    })
   },
- 
+  loading(){
+    wx.showLoading({
+      title:"请求中..."
+    })
+  },
+  closeloading(){
+    wx.hideLoading();
+  },
+  toast(){
+    wx.showToast({
+      title:"请求成功",
+      mask:"true",
+      icon:"success"
+    })
+  },
+  update(){
+    wx.startPullDownRefresh({
+      success(res){
+        console.log(res)
+      }
+    })
+  },
   //生命周期函数--监听页面加载
   onLoad: function (options) {
-    //接受 页面间的传参、发送ajax
-    console.log("页面加载时触发--onload");
-    // this.setData({
-    //   title:"改变后的标题"
-    // })
+    // 获取经度纬度的定位
+    this.location();
+    let res=wx.getSystemInfoSync();
+    wx.setNavigationBarTitle({
+      title:"首页"
+    })
   },
 
  //生命周期函数--监听页面初次渲染完成

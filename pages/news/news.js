@@ -12,5 +12,11 @@ Page({
     this.setData({
       istrue: false
     })
+  },
+  onLoad(options){
+    const eventChannel=this.getOpenerEventChannel()
+    eventChannel.on("aaa",(re)=>{
+      console.log(re)
+    })
   }
 });
