@@ -1,25 +1,4 @@
 <view class="container">
-    <!-- 音频 -->
-    <audio 
-    name="小黑的歌"
-    author="小黑"
-    poster="http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000"
-    controls="{{true}}"
-    src="http://m701.music.126.net/20191128093021/318e615947e0421097a36c15a48d4f00/jdyyaac/010f/550f/550e/6e33dfcbeabe91d760cdbd9b93f93e01.m4a"></audio>
+    <button bindtap="start">开始动画</button>
+    <view class="ani" animation="{{ani}}"></view>
 </view>
-    <!-- 获取专辑图片 -->
-<image class="" src="http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000" ></image>
-<view class="line"></view>
-    <!-- 地图 -->
-    <map name="" class="map"
-    longitude="{{longitude}}"
-    latitude="{{latitude}}"
-></map>
-<view class="line"></view>
-<!-- 轻提示 -->
-<button bindtap="enterNews">点击到新闻</button>
-<view class="line"></view>
-<button bindtap="toast">显示消息消息提示框</button>
-<button bindtap="loading">显示loading</button>
-<button bindtap="closeloading">关闭</button>
-<button  bindtap="update">开始下拉刷新</button>

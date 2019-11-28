@@ -1,7 +1,8 @@
-.pro{
-  width:750rpx;
-}
-.map{
-  width:750rpx;
-  height:500rpx;
+.ani{
+  width:400rpx;
+  height:400rpx;
+  border:20rpx solid rgb(164, 129, 235);
+  border-radius:220rpx;
+  background: burlywood;
+  border-left-color:transparent;
 }
