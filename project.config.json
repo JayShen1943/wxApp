@@ -13,7 +13,7 @@
 		"coverView": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.3",
+	"libVersion": "2.9.4",
 	"appid": "wx3cc43faec4d67174",
 	"projectname": "wxApp",
 	"debugOptions": {
